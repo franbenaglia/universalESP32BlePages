@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BluePanel – BLE dashboard for ESP32</title>
+    <meta name="title-en" content="BluePanel – BLE dashboard for ESP32" />
+    <meta name="title-es" content="BluePanel – Panel BLE para ESP32" />
+    <meta
+      name="description"
+      content="Turn your Android phone into a configurable dashboard for ESP32 projects over Bluetooth Low Energy. No Wi-Fi, no account, no cloud."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./"><img src="favicon.svg" alt="" />BluePanel</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" value="en" aria-pressed="true">English</button>
+          <button type="button" value="es" aria-pressed="false">Español</button>
+        </div>
+      </header>
+
+      <main>
+        <div class="hero">
+          <div>
+            <h1>
+              <span data-lang="en">A dashboard for your ESP32, over Bluetooth</span>
+              <span data-lang="es">Un tablero para tu ESP32, por Bluetooth</span>
+            </h1>
+            <p class="lead">
+              <span data-lang="en">
+                BluePanel turns your Android phone into a configurable panel to watch and control ESP32
+                projects over Bluetooth Low Energy. No Wi-Fi, no account, no cloud.
+              </span>
+              <span data-lang="es">
+                BluePanel convierte tu teléfono Android en un panel configurable para ver y controlar
+                proyectos ESP32 por Bluetooth Low Energy. Sin Wi-Fi, sin cuenta, sin nube.
+              </span>
+            </p>
+            <span class="badge">
+              <span data-lang="en">Coming soon to Google Play</span>
+              <span data-lang="es">Próximamente en Google Play</span>
+            </span>
+            <ul class="facts">
+              <li>
+                <span data-lang="en">Android 6 or later</span>
+                <span data-lang="es">Android 6 o superior</span>
+              </li>
+              <li>
+                <span data-lang="en">Works offline</span>
+                <span data-lang="es">Funciona sin conexión</span>
+              </li>
+              <li>
+                <span data-lang="en">English and Spanish</span>
+                <span data-lang="es">Español e inglés</span>
+              </li>
+            </ul>
+          </div>
+          <div class="phone">
+            <img
+              src="img/dashboard.png"
+              width="360"
+              height="740"
+              alt="BluePanel dashboard showing temperature, humidity, a switch, a button, a slider and a line chart"
+            />
+          </div>
+        </div>
+
+        <section>
+          <h2>
+            <span data-lang="en">What it does</span>
+            <span data-lang="es">Qué hace</span>
+          </h2>
+          <div class="grid">
+            <div class="card">
+              <h3>
+                <span data-lang="en">Your own dashboard</span>
+                <span data-lang="es">Tu propio tablero</span>
+              </h3>
+              <p>
+                <span data-lang="en">
+                  Build a board with value tiles, switches, momentary buttons, sliders and live line
+                  charts, and bind each one to a variable of your device.
+                </span>
+                <span data-lang="es">
+                  Armá un tablero con valores, interruptores, botones momentáneos, deslizadores y
+                  gráficos en vivo, y asociá cada uno a una variable de tu dispositivo.
+                </span>
+              </p>
+            </div>
+            <div class="card">
+              <h3>
+                <span data-lang="en">Profiles</span>
+                <span data-lang="es">Perfiles</span>
+              </h3>
+              <p>
+                <span data-lang="en">
+                  Save one dashboard per kind of device. The right one opens by itself when you
+                  connect. Export a profile as a file and import it on another phone.
+                </span>
+                <span data-lang="es">
+                  Guardá un tablero por tipo de dispositivo. Al conectar se abre solo el que
+                  corresponde. Exportá un perfil como archivo e importalo en otro teléfono.
+                </span>
+              </p>
+            </div>
+            <div class="card">
+              <h3>
+                <span data-lang="en">Data logging</span>
+                <span data-lang="es">Registro de datos</span>
+              </h3>
+              <p>
+                <span data-lang="en">
+                  Record a session, see minimum, maximum and average per variable, and export it as
+                  CSV to open in any spreadsheet.
+                </span>
+                <span data-lang="es">
+                  Grabá una sesión, mirá mínimo, máximo y promedio por variable, y exportala como
+                  CSV para abrirla en cualquier hoja de cálculo.
+                </span>
+              </p>
+            </div>
+            <div class="card">
+              <h3>
+                <span data-lang="en">BLE explorer</span>
+                <span data-lang="es">Explorador BLE</span>
+              </h3>
+              <p>
+                <span data-lang="en">
+                  Scan nearby devices, browse their GATT services and characteristics, and read,
+                  write or subscribe in hex, text or integer.
+                </span>
+                <span data-lang="es">
+                  Buscá dispositivos cercanos, recorré sus servicios y características GATT, y leé,
+                  escribí o suscribite en hexadecimal, texto o entero.
+                </span>
+              </p>
+            </div>
+            <div class="card">
+              <h3>
+                <span data-lang="en">UART terminal</span>
+                <span data-lang="es">Terminal UART</span>
+              </h3>
+              <p>
+                <span data-lang="en">
+                  A timestamped log of everything sent and received over the Nordic UART Service,
+                  with a line to type your own commands.
+                </span>
+                <span data-lang="es">
+                  Un registro con hora de todo lo enviado y recibido por el Nordic UART Service, con
+                  una línea para escribir tus propios comandos.
+                </span>
+              </p>
+            </div>
+            <div class="card">
+              <h3>
+                <span data-lang="en">Private by design</span>
+                <span data-lang="es">Privada por diseño</span>
+              </h3>
+              <p>
+                <span data-lang="en">
+                  No account, no ads, no analytics and no server. Everything stays on your phone.
+                </span>
+                <span data-lang="es">
+                  Sin cuenta, sin anuncios, sin analíticas y sin servidor. Todo queda en tu teléfono.
+                </span>
+                <a href="privacy.html">
+                  <span data-lang="en">Privacy policy</span>
+                  <span data-lang="es">Política de privacidad</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>
+            <span data-lang="en">Screens</span>
+            <span data-lang="es">Pantallas</span>
+          </h2>
+          <div class="shots">
+            <figure>
+              <div class="phone">
+                <img src="img/dashboard.png" width="360" height="740" loading="lazy" alt="Dashboard with live values, controls and a chart" />
+              </div>
+              <figcaption>
+                <span data-lang="en">Dashboard with live values and controls</span>
+                <span data-lang="es">Tablero con valores en vivo y controles</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="phone">
+                <img src="img/terminal.png" width="360" height="740" loading="lazy" alt="Terminal listing JSON messages received from the device" />
+              </div>
+              <figcaption>
+                <span data-lang="en">Terminal with every message</span>
+                <span data-lang="es">Terminal con cada mensaje</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="phone">
+                <img src="img/logs.png" width="360" height="740" loading="lazy" alt="Recorded session with statistics per variable and a CSV export button" />
+              </div>
+              <figcaption>
+                <span data-lang="en">Recorded session with statistics</span>
+                <span data-lang="es">Sesión grabada con estadísticas</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <h2>
+            <span data-lang="en">How your ESP32 talks to it</span>
+            <span data-lang="es">Cómo le habla tu ESP32</span>
+          </h2>
+          <p>
+            <span data-lang="en">
+              The dashboard uses the Nordic UART Service with one short JSON message per line. The
+              device reports a value like this:
+            </span>
+            <span data-lang="es">
+              El tablero usa el Nordic UART Service con un mensaje JSON corto por línea. El
+              dispositivo informa un valor así:
+            </span>
+          </p>
+          <pre><code>{"id":"temperature","value":26.4}</code></pre>
+          <p>
+            <span data-lang="en">
+              And the app changes one by sending the same shape. The device answers with the value
+              it actually applied, so the dashboard always shows the real state.
+            </span>
+            <span data-lang="es">
+              Y la app cambia uno enviando la misma forma. El dispositivo responde con el valor que
+              realmente aplicó, así el tablero siempre muestra el estado real.
+            </span>
+          </p>
+          <pre><code>{"id":"relay1","value":true}</code></pre>
+          <p>
+            <span data-lang="en">
+              A demo firmware for PlatformIO (Arduino framework, NimBLE) is available in the
+            </span>
+            <span data-lang="es">
+              Hay un firmware de demostración para PlatformIO (framework Arduino, NimBLE) en el
+            </span>
+            <a href="https://github.com/franbenaglia/universalESP32Ble">
+              <span data-lang="en">project repository</span><span data-lang="es">repositorio del proyecto</span></a
+            >.
+            <span data-lang="en">
+              Devices that do not use this protocol can still be inspected with the BLE explorer.
+            </span>
+            <span data-lang="es">
+              Los dispositivos que no usan este protocolo igual se pueden inspeccionar con el
+              explorador BLE.
+            </span>
+          </p>
+        </section>
+
+        <section>
+          <h2>
+            <span data-lang="en">Good to know</span>
+            <span data-lang="es">Para tener en cuenta</span>
+          </h2>
+          <div class="note">
+            <p data-lang="en">
+              One device at a time, and the connection lasts while the app is open. This version
+              does not use pairing or encryption: do not use it for locks, heating, machinery or
+              anything that would be dangerous if someone nearby operated it.
+            </p>
+            <p data-lang="es">
+              Un dispositivo por vez, y la conexión dura mientras la app está abierta. Esta versión
+              no usa emparejamiento ni cifrado: no la uses para cerraduras, calefacción, maquinaria
+              ni nada que sea peligroso si alguien cercano lo acciona.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          <a href="privacy.html">
+            <span data-lang="en">Privacy policy</span>
+            <span data-lang="es">Política de privacidad</span>
+          </a>
+          ·
+          <a href="https://github.com/franbenaglia/universalESP32BlePages/issues">
+            <span data-lang="en">Contact</span>
+            <span data-lang="es">Contacto</span>
+          </a>
+        </p>
+        <p data-lang="en">
+          BluePanel is an independent app compatible with ESP32 boards. It is not an official
+          Espressif product and is not affiliated with or endorsed by Espressif Systems. ESP32 is a
+          trademark of Espressif Systems. Android and Google Play are trademarks of Google LLC.
+        </p>
+        <p data-lang="es">
+          BluePanel es una app independiente compatible con placas ESP32. No es un producto oficial
+          de Espressif ni está afiliada o avalada por Espressif Systems. ESP32 es una marca de
+          Espressif Systems. Android y Google Play son marcas de Google LLC.
+        </p>
+      </footer>
+    </div>
+    <script src="lang.js"></script>
+  </body>
+</html>
