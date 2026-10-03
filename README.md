@@ -8,6 +8,7 @@ Landing y política de privacidad de la app BluePanel, para publicar con GitHub 
 | `privacy.html` | Política de privacidad (la URL que pide Google Play) |
 | `styles.css` | Estilos compartidos, con modo claro y oscuro |
 | `lang.js` | Cambio entre español e inglés |
+| `icon.png` | Icono de la app, usado como logo y favicon |
 | `img/` | Capturas de la app |
 
 Es HTML estático sin dependencias ni recursos externos: no carga fuentes, scripts ni rastreadores de terceros.
@@ -25,7 +26,7 @@ Cada texto está dos veces, marcado con `data-lang="en"` y `data-lang="es"`. Se 
 ## Qué revisar antes de publicar la app
 
 - La política nombra el paquete `com.bluepanel.app` y al desarrollador como `franbenaglia`; actualizar si cambian.
-- El contacto es la página de issues de este repositorio; se puede sumar un correo.
+- El contacto es `feedback@fab-apps.com`, en el pie de la landing y en la política.
 - El botón «Próximamente en Google Play» no tiene enlace; reemplazarlo por el enlace a la ficha cuando exista.
 - La landing enlaza a `github.com/franbenaglia/universalESP32Ble` por el firmware de demostración; quitar el enlace si ese repositorio es privado.
 - Si la app cambia qué datos guarda o agrega red, anuncios o analíticas, hay que actualizar `privacy.html` y su fecha.
