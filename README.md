@@ -27,7 +27,8 @@ Cada texto está dos veces, marcado con `data-lang="en"` y `data-lang="es"`. Se 
 
 - La política nombra el paquete `com.bluepanel.app` y al desarrollador como `franbenaglia`; actualizar si cambian.
 - El contacto es `feedback@fab-apps.com`, en el pie de la landing y en la política.
-- El botón «Próximamente en Google Play» no tiene enlace; reemplazarlo por el enlace a la ficha cuando exista.
+- El botón de descarga apunta a `releases/latest/download/BluePanel.apk`: siempre baja el último release de este repositorio, mientras el archivo se siga llamando `BluePanel.apk`. La versión y el tamaño que figuran debajo del botón están escritos a mano en `index.html` y hay que actualizarlos en cada release.
+- Cuando exista la ficha de Google Play, agregar su enlace junto al botón.
 - La landing enlaza a `github.com/franbenaglia/universalESP32Ble` por el firmware de demostración; quitar el enlace si ese repositorio es privado.
 - Si la app cambia qué datos guarda o agrega red, anuncios o analíticas, hay que actualizar `privacy.html` y su fecha.
 

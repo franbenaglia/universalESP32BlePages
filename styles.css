@@ -135,11 +135,18 @@ h3 {
 
 .badge {
   display: inline-block;
+  text-decoration: none;
   padding: 10px 18px;
   border-radius: 10px;
   background: var(--accent);
   color: var(--accent-text);
   font-weight: 600;
+}
+
+.download-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .facts {
