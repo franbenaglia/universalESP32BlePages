@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BluePanel – technical demo</title>
+    <meta
+      name="description"
+      content="Technical demonstration of BluePanel, an Android app that monitors and controls ESP32 devices over Bluetooth Low Energy."
+    />
+    <!--
+      Indexing: this page is meant to be opened from a portfolio link, not found
+      through search. To let search engines index it, change the content to
+      "index, follow". noindex does not make the page private.
+    -->
+    <meta name="robots" content="noindex, follow" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="../icon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <span class="brand"><img src="../icon.png" alt="" />BluePanel</span>
+      </header>
+
+      <main>
+        <!-- A: Hero -->
+        <div class="hero">
+          <div>
+            <span class="status">Technical demonstration · Android app + ESP32 firmware</span>
+            <h1>BluePanel</h1>
+            <p class="lead">
+              Bluetooth Low Energy dashboard for ESP32 devices. The phone connects directly to the
+              device, shows its values live, sends commands, and records sessions. No Internet,
+              account or server is involved.
+            </p>
+            <a
+              class="badge"
+              href="https://github.com/franbenaglia/universalESP32BlePages/releases/download/v1.0.0/BluePanel.apk"
+              type="application/vnd.android.package-archive"
+              >Download Android APK</a
+            >
+            <p class="hero-meta">Version 1.0.0 · 13.8 MB · Android 6.0 or later · ARM devices</p>
+          </div>
+          <div class="phone">
+            <img
+              src="../img/dashboard.png"
+              width="360"
+              height="740"
+              alt="BluePanel dashboard with temperature and humidity values, a switch, a button, a slider and a live line chart"
+            />
+          </div>
+        </div>
+
+        <!-- B: Capabilities -->
+        <section aria-labelledby="capabilities">
+          <h2 id="capabilities">What the project demonstrates</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Bluetooth Low Energy client</h3>
+              <p>
+                Scanning, connection, GATT service discovery, read, write and notifications, with
+                MTU negotiation and handling of lost connections.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Message protocol over BLE</h3>
+              <p>
+                JSON lines over the Nordic UART Service, reassembled from fragmented notifications.
+                Every write is confirmed by the device before the screen shows it.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Configurable real-time dashboard</h3>
+              <p>
+                Value tiles, switches, momentary buttons, sliders with rate-limited writes, and live
+                line charts, saved as profiles per kind of device.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Local data logging</h3>
+              <p>
+                Sessions stored in an on-device SQLite database, with minimum, maximum and average per
+                variable and CSV export through the Android share sheet.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Embedded firmware</h3>
+              <p>
+                ESP32 firmware in C++ (PlatformIO, Arduino framework, NimBLE) that exposes sensor
+                values and outputs through the same protocol.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Hybrid Android architecture</h3>
+              <p>
+                React and Ionic interface in a Capacitor shell, with all Bluetooth access behind one
+                interface so the whole UI also runs against a simulated device.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- C: Screenshots -->
+        <section aria-labelledby="screens">
+          <h2 id="screens">Screens</h2>
+          <p>
+            Captured from the application running against its built-in simulated ESP32. Select an
+            image to enlarge it.
+          </p>
+          <div class="shots">
+            <figure>
+              <button type="button" data-enlarge data-caption="Dashboard: live values, controls and a chart">
+                <span class="phone">
+                  <img
+                    src="../img/dashboard.png"
+                    width="360"
+                    height="740"
+                    loading="lazy"
+                    alt="Dashboard with temperature, humidity, a light switch, a pump button, a fan slider and a temperature chart"
+                  />
+                </span>
+              </button>
+              <figcaption>Dashboard: live values, controls and a chart</figcaption>
+            </figure>
+            <figure>
+              <button type="button" data-enlarge data-caption="Terminal: every message exchanged with the device">
+                <span class="phone">
+                  <img
+                    src="../img/terminal.png"
+                    width="360"
+                    height="740"
+                    loading="lazy"
+                    alt="Terminal listing timestamped JSON messages received from the device"
+                  />
+                </span>
+              </button>
+              <figcaption>Terminal: every message exchanged with the device</figcaption>
+            </figure>
+            <figure>
+              <button type="button" data-enlarge data-caption="Recorded session with statistics and CSV export">
+                <span class="phone">
+                  <img
+                    src="../img/logs.png"
+                    width="360"
+                    height="740"
+                    loading="lazy"
+                    alt="Recorded session showing sample count, minimum, maximum and average per variable, with an Export CSV button"
+                  />
+                </span>
+              </button>
+              <figcaption>Recorded session with statistics and CSV export</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- D: How to test -->
+        <section aria-labelledby="install">
+          <h2 id="install">How to install and test</h2>
+          <ol class="steps">
+            <li>Download the APK on an Android phone (Android 6.0 or later).</li>
+            <li>Open the downloaded file from the browser or the file manager.</li>
+            <li>
+              Android asks for permission to install apps from that source the first time. Allow it
+              for the browser or file manager you used, then follow the installation prompts.
+            </li>
+            <li>
+              Open BluePanel and allow access to nearby devices (on Android 11 or earlier, location
+              access, which those versions require for any Bluetooth scan).
+            </li>
+            <li>Turn Bluetooth on and scan.</li>
+          </ol>
+          <p>
+            The app works entirely offline. It needs a phone with Bluetooth Low Energy.
+          </p>
+          <div class="note">
+            <p>
+              The dashboard, terminal and session recording need a device that implements the
+              BluePanel protocol, such as an ESP32 running the demonstration firmware. That firmware
+              is not distributed on this page. Without such a device, the scanner and the BLE
+              explorer can still be tried with other Bluetooth Low Energy devices nearby.
+            </p>
+          </div>
+        </section>
+
+        <!-- E: Suggested demonstration -->
+        <section aria-labelledby="scenario">
+          <h2 id="scenario">Suggested demonstration</h2>
+          <h3>With an ESP32 running the demonstration firmware</h3>
+          <p>
+            Connect to the device and open the Dashboard tab. Create a profile, add widgets for the
+            variables the device reports, switch the LED, move the PWM slider and watch the chart.
+            Then open the Logs tab, record a session for a minute, review the statistics and export
+            it as CSV.
+          </p>
+          <h3>Without an ESP32</h3>
+          <p>
+            Scan, filter the list by name, and connect to a nearby BLE device that accepts
+            connections. In the Services tab, browse its GATT services and characteristics and read
+            a value, shown as hexadecimal, text and integer.
+          </p>
+        </section>
+
+        <!-- F: Architecture -->
+        <section aria-labelledby="architecture">
+          <h2 id="architecture">Technical architecture</h2>
+          <ol class="flow" aria-label="Data path from the interface to the device">
+            <li><strong>Interface</strong><span>React, Ionic, TypeScript</span></li>
+            <li><strong>App state and protocol</strong><span>Zustand store, line framing, JSON messages</span></li>
+            <li><strong>BleTransport</strong><span>Capacitor Bluetooth LE plugin over Android BluetoothGatt</span></li>
+            <li><strong>BLE link</strong><span>Nordic UART Service, notifications and writes</span></li>
+            <li><strong>ESP32</strong><span>NimBLE GATT server, sensors and outputs</span></li>
+          </ol>
+          <p>
+            Profiles are stored with Capacitor Preferences and recorded sessions in SQLite, both on
+            the phone. CSV and profile files leave the phone only when the user shares them. The
+            Bluetooth layer has a simulated implementation used for development and automated
+            tests, which is how the screenshots above were taken.
+          </p>
+        </section>
+
+        <!-- G: Technical notes -->
+        <section aria-labelledby="notes">
+          <h2 id="notes">Technical notes</h2>
+          <dl class="specs">
+            <dt>Version</dt>
+            <dd>1.0.0 (version code 1)</dd>
+            <dt>Application ID</dt>
+            <dd><code>com.bluepanel.app</code></dd>
+            <dt>Android</dt>
+            <dd>6.0 or later (API 23); built for Android 15 (API 35)</dd>
+            <dt>Architectures</dt>
+            <dd>arm64-v8a, armeabi-v7a</dd>
+            <dt>Internet</dt>
+            <dd>Not required. The app makes no network requests.</dd>
+            <dt>Hardware</dt>
+            <dd>
+              Bluetooth Low Energy. For the full demonstration, a device implementing the BluePanel
+              protocol, such as an ESP32 with the demonstration firmware.
+            </dd>
+            <dt>Permissions</dt>
+            <dd>
+              Nearby devices (Bluetooth scan, declared as not used for location, and Bluetooth
+              connect). On Android 11 or earlier, location, which those versions require to scan.
+              Internet is declared by the application framework but not used.
+            </dd>
+            <dt>File</dt>
+            <dd><code>BluePanel.apk</code>, 13,792,763 bytes</dd>
+            <dt>SHA-256</dt>
+            <dd><code>9a7f6f4bc9368f3aa749ad2cc70b0ec716462ff30bd0e5b3e9e73530e9e2ec17</code></dd>
+            <dt>Signing certificate SHA-256</dt>
+            <dd>
+              <code>81:DE:1C:2A:EF:CA:E2:02:FF:F3:F4:CA:7E:57:C9:C1:A0:4F:EE:84:49:E6:87:25:1F:47:E2:4C:56:63:DD:14</code>
+            </dd>
+            <dt>Limitations</dt>
+            <dd>
+              One device at a time. The connection lasts while the app is open. Bluetooth pairing
+              and encryption are not used in this version, so it is not suitable for controlling
+              anything that would be dangerous if operated by someone nearby.
+            </dd>
+          </dl>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          This application is provided for technical evaluation. It has not undergone an
+          independent security audit.
+        </p>
+        <p>
+          This page is an independent technical demonstration and is not affiliated with Fiverr.
+          BluePanel is compatible with ESP32 boards but is not an Espressif product. ESP32 is a
+          trademark of Espressif Systems. Android is a trademark of Google LLC.
+        </p>
+      </footer>
+    </div>
+
+    <dialog id="lightbox" class="lightbox" aria-label="Enlarged screenshot">
+      <img alt="" />
+      <div class="lightbox-bar">
+        <span class="lightbox-caption"></span>
+        <button type="button" data-close>Close</button>
+      </div>
+    </dialog>
+    <script src="demo.js"></script>
+  </body>
+</html>
